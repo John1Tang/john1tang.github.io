@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="hexo,nextT," />
+  <meta name="keywords" content="SQL," />
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="问题一 使用hexo搭建使用nextT主题的博客，使用tags，categories功能配置不生效网上看到最多的对使用 tags，categories功能，需要在_config.yml中配置以下选项 123456789menu:  home: &#x2F; || home  #about: &#x2F;about&#x2F; || user  tags: &#x2F;tags&#x2F; || t">
+<meta name="description" content="Today in a interview i was asked to write a SQL that query for the very hour of most sent msg per user. When i write down the sql with “group by … order by … desc limit 1”, I was asked if there were a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="record for the twisted way of deploy hexo with nextT theme">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;18&#x2F;record-for-the-twisted-way-of-deploy-hexo-with-nextT-theme&#x2F;index.html">
+<meta property="og:title" content="thoughts on performance of max vs order by limit 1">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;20&#x2F;thoughts-on-performance-of-max-vs-order-by-limit-1&#x2F;index.html">
 <meta property="og:site_name" content="John1Tang&#39;s Blog">
-<meta property="og:description" content="问题一 使用hexo搭建使用nextT主题的博客，使用tags，categories功能配置不生效网上看到最多的对使用 tags，categories功能，需要在_config.yml中配置以下选项 123456789menu:  home: &#x2F; || home  #about: &#x2F;about&#x2F; || user  tags: &#x2F;tags&#x2F; || t">
+<meta property="og:description" content="Today in a interview i was asked to write a SQL that query for the very hour of most sent msg per user. When i write down the sql with “group by … order by … desc limit 1”, I was asked if there were a">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-12-18T11:20:50.000Z">
-<meta property="article:modified_time" content="2019-12-18T11:43:09.779Z">
+<meta property="article:published_time" content="2019-12-20T15:18:59.000Z">
+<meta property="article:modified_time" content="2019-12-20T15:44:24.010Z">
 <meta property="article:author" content="John1Tang">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="nextT">
+<meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary">
 
 
@@ -121,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/12/18/record-for-the-twisted-way-of-deploy-hexo-with-nextT-theme/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/12/20/thoughts-on-performance-of-max-vs-order-by-limit-1/"/>
 
 
 
 
 
-  <title>record for the twisted way of deploy hexo with nextT theme | John1Tang's Blog</title>
+  <title>thoughts on performance of max vs order by limit 1 | John1Tang's Blog</title>
   
 
 
@@ -254,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/18/record-for-the-twisted-way-of-deploy-hexo-with-nextT-theme/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/20/thoughts-on-performance-of-max-vs-order-by-limit-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John1Tang">
@@ -271,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">record for the twisted way of deploy hexo with nextT theme</h1>
+          <h1 class="post-title" itemprop="name headline">thoughts on performance of max vs order by limit 1</h1>
         
 
         <div class="post-meta">
@@ -283,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-18T19:20:50+08:00">
-                2019-12-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-20T23:18:59+08:00">
+                2019-12-20
               </time>
             
 
@@ -306,8 +305,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ops/" itemprop="url" rel="index">
-                    <span itemprop="name">ops</span>
+                  <a href="/categories/dev/" itemprop="url" rel="index">
+                    <span itemprop="name">dev</span>
                   </a>
                 </span>
 
@@ -343,25 +342,16 @@
       
 
       
-        <h4 id="问题一-使用hexo搭建使用nextT主题的博客，使用tags，categories功能配置不生效"><a href="#问题一-使用hexo搭建使用nextT主题的博客，使用tags，categories功能配置不生效" class="headerlink" title="问题一 使用hexo搭建使用nextT主题的博客，使用tags，categories功能配置不生效"></a>问题一 使用hexo搭建使用nextT主题的博客，使用tags，categories功能配置不生效</h4><p>网上看到最多的对使用 tags，categories功能，需要在_config.yml中配置以下选项</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || home</span><br><span class="line">  #about: &#x2F;about&#x2F; || user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || heartbeat</span><br></pre></td></tr></table></figure>
+        <p>Today in a interview i was asked to write a SQL that query for the very hour of most sent msg per user. When i write down the sql with “group by … order by … desc limit 1”, I was asked if there were a large amount of data, would it be right to do that? </p>
+<p>In the way back home, I thought of there is another function “max()” in SQL which do the same trick.    Intuitively, I would believe that in SQL engine, if I build an index for the certain column, the sql parser would do logical improvement for querying.</p>
+<p>So I google for it, see how sql execution really do:</p>
+<blockquote>
+<p>There is an actual <strong>difference</strong> between <code>max()</code> and <code>ORDER BY DESC + LIMIT 1</code>. Many people seem to miss that. NULL values sort <em>first</em> in descending sort order. So <code>ORDER BY timestamp DESC LIMIT 1</code> returns a row with <code>timestamp IS NULL</code> if it exists, while the aggregate function <code>max()</code> <em>ignores</em> NULL values and returns the latest non-null timestamp.</p>
+</blockquote>
+<blockquote>
+<p>see more detail: <a href="https://stackoverflow.com/questions/34246403/performance-of-max-vs-order-by-desc-limit-1" target="_blank" rel="noopener">https://stackoverflow.com/questions/34246403/performance-of-max-vs-order-by-desc-limit-1</a></p>
+</blockquote>
 
-<p>身为一个小白，我配置了半天，愣是没有生效，后来发现引用的theme–nextT本身，也是有一个_config.yml配置的，于是哼哧解开nextT的menu配置。</p>
-<p>这个现象的原因看到nextT theme的配置文件中有个是否继承的父属性的选项，默认是false</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Set to true, if you want to fully override the default configuration.</span><br><span class="line"># Useful if you don&#39;t want to inherit the theme _config.yml configurations.</span><br><span class="line">override: false</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="问题二-hexo路径存在空格-现象路径-tags-20"><a href="#问题二-hexo路径存在空格-现象路径-tags-20" class="headerlink" title="问题二 hexo路径存在空格  现象路径 tags/20%"></a>问题二 hexo路径存在空格  现象路径 tags/20%</h4><p>同样是上面menu的配置，猜想是引用js库读取配置不严谨，没有对格式本身的产生的空格做trim。果不其然，改成丑陋一点的写法访问正常。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F;||home</span><br><span class="line">  #about: &#x2F;about&#x2F; || user</span><br><span class="line">  tags: &#x2F;tags&#x2F;||tags</span><br><span class="line">  categories: &#x2F;categories&#x2F;||th</span><br><span class="line">  archives: &#x2F;archives&#x2F;||archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || heartbeat</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="PS：相关npm命令"><a href="#PS：相关npm命令" class="headerlink" title="PS：相关npm命令"></a>PS：相关npm命令</h4><h5 id="切换npm源"><a href="#切换npm源" class="headerlink" title="切换npm源"></a>切换npm源</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry http:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<h5 id="安装Hexo的categories生成插件"><a href="#安装Hexo的categories生成插件" class="headerlink" title="安装Hexo的categories生成插件"></a>安装Hexo的categories生成插件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-category --save</span><br></pre></td></tr></table></figure>
-
-<h5 id="安装Hexo的Tags生成插件"><a href="#安装Hexo的Tags生成插件" class="headerlink" title="安装Hexo的Tags生成插件"></a>安装Hexo的Tags生成插件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-tag --save</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -378,9 +368,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
-          
-            <a href="/tags/nextT/" rel="tag"># nextT</a>
+            <a href="/tags/SQL/" rel="tag"># SQL</a>
           
         </div>
       
@@ -393,8 +381,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/28/ARTS-Week003/" rel="next" title="ARTS-Week003">
-                <i class="fa fa-chevron-left"></i> ARTS-Week003
+              <a href="/2019/12/19/leetcode-3/" rel="next" title="leetcode-3">
+                <i class="fa fa-chevron-left"></i> leetcode-3
               </a>
             
           </div>
@@ -402,10 +390,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/12/19/leetcode-3/" rel="prev" title="leetcode-3">
-                leetcode-3 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -457,17 +441,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -547,22 +522,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题一-使用hexo搭建使用nextT主题的博客，使用tags，categories功能配置不生效"><span class="nav-number">1.</span> <span class="nav-text">问题一 使用hexo搭建使用nextT主题的博客，使用tags，categories功能配置不生效</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题二-hexo路径存在空格-现象路径-tags-20"><span class="nav-number">2.</span> <span class="nav-text">问题二 hexo路径存在空格  现象路径 tags&#x2F;20%</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PS：相关npm命令"><span class="nav-number">3.</span> <span class="nav-text">PS：相关npm命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#切换npm源"><span class="nav-number">3.1.</span> <span class="nav-text">切换npm源</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装Hexo的categories生成插件"><span class="nav-number">3.2.</span> <span class="nav-text">安装Hexo的categories生成插件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装Hexo的Tags生成插件"><span class="nav-number">3.3.</span> <span class="nav-text">安装Hexo的Tags生成插件</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
