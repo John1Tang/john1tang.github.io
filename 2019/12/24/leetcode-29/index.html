@@ -79,11 +79,15 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="John1Tang&#39;s Blog">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;categories&#x2F;ops&#x2F;index.html">
+<meta name="description" content="Given two integers dividend and divisor, divide two integers without using multiplication, division and mod operator. Return the quotient after dividing dividend by divisor. The integer division shou">
+<meta property="og:type" content="article">
+<meta property="og:title" content="leetcode-29">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;24&#x2F;leetcode-29&#x2F;index.html">
 <meta property="og:site_name" content="John1Tang&#39;s Blog">
+<meta property="og:description" content="Given two integers dividend and divisor, divide two integers without using multiplication, division and mod operator. Return the quotient after dividing dividend by divisor. The integer division shou">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-12-24T11:33:52.000Z">
+<meta property="article:modified_time" content="2019-12-24T11:34:50.588Z">
 <meta property="article:author" content="John1Tang">
 <meta name="twitter:card" content="summary">
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/ops/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/12/24/leetcode-29/"/>
 
 
 
 
 
-  <title>Category: ops | John1Tang's Blog</title>
+  <title>leetcode-29 | John1Tang's Blog</title>
   
 
 
@@ -140,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,55 +238,152 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>ops<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/24/leetcode-29/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John1Tang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/self-tang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="John1Tang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/12/18/record-for-the-twisted-way-of-deploy-hexo-with-nextT-theme/" itemprop="url">
-              
-                <span itemprop="name">record for the twisted way of deploy hexo with nextT theme</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">leetcode-29</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-12-18T19:20:50+08:00"
-              content="2019-12-18" >
-          12-18
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-24T19:33:52+08:00">
+                2019-12-24
+              </time>
+            
 
-    </header>
-  </article>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>Given two integers dividend and divisor, divide two integers without using multiplication, division and mod operator.</p>
+<p>Return the quotient after dividing dividend by divisor.</p>
+<p>The integer division should truncate toward zero.</p>
+<p>Example 1:</p>
+<p>Input: dividend = 10, divisor = 3<br>Output: 3<br>Example 2:</p>
+<p>Input: dividend = 7, divisor = -3<br>Output: -2<br>Note:</p>
+<p>Both dividend and divisor will be 32-bit signed integers.<br>The divisor will never be 0.<br>Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231,  231 − 1]. For the purpose of this problem, assume that your function returns 231 − 1 when the division result overflows.</p>
+</blockquote>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/divide-two-integers" target="_blank" rel="noopener">https://leetcode-cn.com/problems/divide-two-integers</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int divide(int dividend, int divisor) &#123;</span><br><span class="line">        boolean sign &#x3D; (dividend &gt; 0) ^ (divisor &gt; 0);</span><br><span class="line">        int result &#x3D; 0;</span><br><span class="line">        if(dividend &gt; 0)&#123;</span><br><span class="line">            dividend &#x3D; -dividend;</span><br><span class="line">        &#125;</span><br><span class="line">        if(divisor &gt; 0)&#123;</span><br><span class="line">            divisor &#x3D; - divisor;</span><br><span class="line">        &#125;</span><br><span class="line">        while(dividend &lt;&#x3D; divisor)&#123;</span><br><span class="line">            int tmp_result &#x3D; -1;</span><br><span class="line">            int tmp_divisor &#x3D; divisor;</span><br><span class="line">            while(dividend &lt;&#x3D; (tmp_divisor &lt;&lt; 1))&#123;</span><br><span class="line">                if(tmp_divisor &lt;&#x3D; (Integer.MIN_VALUE &gt;&gt; 1))&#123;</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">                tmp_result &#x3D; tmp_result &lt;&lt; 1;</span><br><span class="line">                tmp_divisor &#x3D; tmp_divisor &lt;&lt; 1;</span><br><span class="line">            &#125;</span><br><span class="line">            dividend &#x3D; dividend - tmp_divisor;</span><br><span class="line">            result +&#x3D; tmp_result;</span><br><span class="line">        &#125;</span><br><span class="line">        if(!sign)&#123;</span><br><span class="line">            if(result &lt;&#x3D; Integer.MIN_VALUE)&#123;</span><br><span class="line">                return Integer.MAX_VALUE;</span><br><span class="line">            &#125;</span><br><span class="line">            result &#x3D; -result;</span><br><span class="line">        &#125;</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/22/leetcode-8/" rel="next" title="leetcode-8">
+                <i class="fa fa-chevron-left"></i> leetcode-8
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -290,6 +391,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -524,6 +629,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
