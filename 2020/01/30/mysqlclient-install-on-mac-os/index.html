@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="leetcode," />
+  <meta name="keywords" content="python," />
 
 
 
@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Implement atoi which converts a string to an integer. The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from thi">
+<meta name="description" content="I tried to “pip3 install mysqlclient”, on terminal it said: 12345678910111213141516ERROR: Command errored out with exit status 1: command: &#x2F;usr&#x2F;local&#x2F;opt&#x2F;python&#x2F;bin&#x2F;python3.7 -c &#39;import sys, setuptool">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode-8">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;22&#x2F;leetcode-8&#x2F;index.html">
+<meta property="og:title" content="mysqlclient install on mac os">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;30&#x2F;mysqlclient-install-on-mac-os&#x2F;index.html">
 <meta property="og:site_name" content="John1Tang&#39;s Blog">
-<meta property="og:description" content="Implement atoi which converts a string to an integer. The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from thi">
+<meta property="og:description" content="I tried to “pip3 install mysqlclient”, on terminal it said: 12345678910111213141516ERROR: Command errored out with exit status 1: command: &#x2F;usr&#x2F;local&#x2F;opt&#x2F;python&#x2F;bin&#x2F;python3.7 -c &#39;import sys, setuptool">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-12-21T17:06:20.000Z">
-<meta property="article:modified_time" content="2019-12-21T17:08:54.451Z">
+<meta property="article:published_time" content="2020-01-30T03:21:43.000Z">
+<meta property="article:modified_time" content="2020-01-30T04:01:45.538Z">
 <meta property="article:author" content="John1Tang">
-<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/12/22/leetcode-8/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/01/30/mysqlclient-install-on-mac-os/"/>
 
 
 
 
 
-  <title>leetcode-8 | John1Tang's Blog</title>
+  <title>mysqlclient install on mac os | John1Tang's Blog</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/22/leetcode-8/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/30/mysqlclient-install-on-mac-os/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John1Tang">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode-8</h1>
+          <h1 class="post-title" itemprop="name headline">mysqlclient install on mac os</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-22T01:06:20+08:00">
-                2019-12-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-30T11:21:43+08:00">
+                2020-01-30
               </time>
             
 
@@ -305,8 +305,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/algorithm/" itemprop="url" rel="index">
-                    <span itemprop="name">algorithm</span>
+                  <a href="/categories/dev/" itemprop="url" rel="index">
+                    <span itemprop="name">dev</span>
                   </a>
                 </span>
 
@@ -342,23 +342,23 @@
       
 
       
-        <blockquote>
-<p>Implement atoi which converts a string to an integer.</p>
-<p>The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.</p>
-<p>The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.</p>
-<p>If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.</p>
-<p>If no valid conversion could be performed, a zero value is returned.</p>
-<p>Note:</p>
-<p>Only the space character ‘ ‘ is considered as whitespace character.<br>Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231,  231 − 1]. If the numerical value is out of the range of representable values, INT_MAX (231 − 1) or INT_MIN (−231) is returned.<br>Example 1:</p>
-<p>Input: “42”<br>Output: 42<br>Example 2:</p>
-<p>Input: “   -42”<br>Output: -42<br>Explanation: The first non-whitespace character is ‘-‘, which is the minus sign.<br>             Then take as many numerical digits as possible, which gets 42.<br>Example 3:</p>
-<p>Input: “4193 with words”<br>Output: 4193<br>Explanation: Conversion stops at digit ‘3’ as the next character is not a numerical digit.<br>Example 4:</p>
-<p>Input: “words and 987”<br>Output: 0<br>Explanation: The first non-whitespace character is ‘w’, which is not a numerical<br>             digit or a +/- sign. Therefore no valid conversion could be performed.<br>Example 5:</p>
-<p>Input: “-91283472332”<br>Output: -2147483648<br>Explanation: The number “-91283472332” is out of the range of a 32-bit signed integer.<br>             Thefore INT_MIN (−231) is returned.</p>
-</blockquote>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/string-to-integer-atoi" target="_blank" rel="noopener">https://leetcode-cn.com/problems/string-to-integer-atoi</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<p>My solution:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int myAtoi(String str) &#123;</span><br><span class="line"></span><br><span class="line">        str &#x3D; str.trim();</span><br><span class="line">        int len &#x3D; str.length();</span><br><span class="line">        if(str &#x3D;&#x3D; null || len &#x3D;&#x3D; 0)&#123;</span><br><span class="line">            return 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        long result &#x3D; 0;</span><br><span class="line">        int sign &#x3D; 1, start &#x3D; 0;</span><br><span class="line"></span><br><span class="line">        char curChar &#x3D; str.charAt(0);</span><br><span class="line">        if(curChar &#x3D;&#x3D; &#39;+&#39;)&#123;</span><br><span class="line">            start++;</span><br><span class="line">        &#125;else if(curChar &#x3D;&#x3D; &#39;-&#39;)&#123;</span><br><span class="line">            sign &#x3D; -1;</span><br><span class="line">            start++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        for(; start &lt; len; start++)&#123;</span><br><span class="line">            curChar &#x3D; str.charAt(start);</span><br><span class="line">            if(!Character.isDigit(curChar))&#123;</span><br><span class="line">                return (int) result * sign;</span><br><span class="line">            &#125;</span><br><span class="line">            result &#x3D; result * 10 + curChar - &#39;0&#39;;</span><br><span class="line">            if(sign &#x3D;&#x3D; 1 &amp;&amp; result &gt; Integer.MAX_VALUE)&#123;</span><br><span class="line">                return Integer.MAX_VALUE;</span><br><span class="line">            &#125;else if(sign &#x3D;&#x3D; -1 &amp;&amp; result &gt; Integer.MAX_VALUE)&#123;</span><br><span class="line">                return Integer.MIN_VALUE;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return (int) result * sign;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>I tried to “pip3 install mysqlclient”, on terminal it said:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">ERROR: Command errored out with <span class="built_in">exit</span> status 1:</span><br><span class="line"> <span class="built_in">command</span>: /usr/<span class="built_in">local</span>/opt/python/bin/python3.7 -c <span class="string">'import sys, setuptools, tokenize; sys.argv[0] = '</span><span class="string">"'"</span><span class="string">'/private/var/folders/tj/vjwl0qpd6l5ct6bdjgwyk1rh0000gp/T/pip-install-abwz3tky/mysqlclient/setup.py'</span><span class="string">"'"</span><span class="string">'; __file__='</span><span class="string">"'"</span><span class="string">'/private/var/folders/tj/vjwl0qpd6l5ct6bdjgwyk1rh0000gp/T/pip-install-abwz3tky/mysqlclient/setup.py'</span><span class="string">"'"</span><span class="string">';f=getattr(tokenize, '</span><span class="string">"'"</span><span class="string">'open'</span><span class="string">"'"</span><span class="string">', open)(__file__);code=f.read().replace('</span><span class="string">"'"</span><span class="string">'\r\n'</span><span class="string">"'"</span><span class="string">', '</span><span class="string">"'"</span><span class="string">'\n'</span><span class="string">"'"</span><span class="string">');f.close();exec(compile(code, __file__, '</span><span class="string">"'"</span><span class="string">'exec'</span><span class="string">"'"</span><span class="string">'))'</span> egg_info --egg-base /private/var/folders/tj/vjwl0qpd6l5ct6bdjgwyk1rh0000gp/T/pip-install-abwz3tky/mysqlclient/pip-egg-info</span><br><span class="line">     cwd: /private/var/folders/tj/vjwl0qpd6l5ct6bdjgwyk1rh0000gp/T/pip-install-abwz3tky/mysqlclient/</span><br><span class="line">Complete output (12 lines):</span><br><span class="line">/bin/sh: mysql_config: <span class="built_in">command</span> not found</span><br><span class="line">/bin/sh: mariadb_config: <span class="built_in">command</span> not found</span><br><span class="line">/bin/sh: mysql_config: <span class="built_in">command</span> not found</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;string&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">  File <span class="string">"/private/var/folders/tj/vjwl0qpd6l5ct6bdjgwyk1rh0000gp/T/pip-install-abwz3tky/mysqlclient/setup.py"</span>, line 16, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    metadata, options = get_config()</span><br><span class="line">  File <span class="string">"/private/var/folders/tj/vjwl0qpd6l5ct6bdjgwyk1rh0000gp/T/pip-install-abwz3tky/mysqlclient/setup_posix.py"</span>, line 61, <span class="keyword">in</span> get_config</span><br><span class="line">    libs = mysql_config(<span class="string">"libs"</span>)</span><br><span class="line">  File <span class="string">"/private/var/folders/tj/vjwl0qpd6l5ct6bdjgwyk1rh0000gp/T/pip-install-abwz3tky/mysqlclient/setup_posix.py"</span>, line 29, <span class="keyword">in</span> mysql_config</span><br><span class="line">    raise EnvironmentError(<span class="string">"%s not found"</span> % (_mysql_config_path,))</span><br><span class="line">OSError: mysql_config not found</span><br></pre></td></tr></table></figure>
+
+<p>checked the GitHub, seem that there are some required prerequisites for <a href="https://github.com/PyMySQL/mysqlclient-python#install" target="_blank" rel="noopener">mysqlclient</a>?</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">brew install mysql-client</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'export PATH="/usr/local/opt/mysql-client/bin:$PATH"'</span> &gt;&gt; ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"/usr/local/opt/mysql-client/bin:<span class="variable">$PATH</span>"</span></span><br></pre></td></tr></table></figure>
+
+<p>Unfortunately, after setting the system env variables, it still went with:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ld: library not found <span class="keyword">for</span> -lssl</span><br><span class="line">clang: error: linker <span class="built_in">command</span> failed with <span class="built_in">exit</span> code 1 (use -v to see invocation)</span><br><span class="line">error: <span class="built_in">command</span> <span class="string">'xcrun'</span> failed with <span class="built_in">exit</span> status 1</span><br></pre></td></tr></table></figure>
+
+<p>Tried with this:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">brew install openssl</span><br><span class="line"></span><br><span class="line">brew upgrade openssl</span><br><span class="line"></span><br><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+
+<p>Finally:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">env LDFLAGS=<span class="string">"-I/usr/local/opt/openssl/include -L/usr/local/opt/openssl/lib"</span> pip3 --no-cache install <span class="string">'mysqlclient==1.4.6'</span></span><br></pre></td></tr></table></figure>
+
+<p>Turns out:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Collecting mysqlclient==1.4.6</span><br><span class="line">  Downloading https://files.pythonhosted.org/packages/d0/97/7326248ac8d5049968bf4ec708a5d3d4806e412a42e74160d7f266a3e03a/mysqlclient-1.4.6.tar.gz (85kB)</span><br><span class="line">    100% |████████████████████████████████| 92kB 5.6kB/s </span><br><span class="line">Installing collected packages: mysqlclient</span><br><span class="line">  Running setup.py install <span class="keyword">for</span> mysqlclient ... <span class="keyword">done</span></span><br><span class="line">Successfully installed mysqlclient-1.4.6</span><br></pre></td></tr></table></figure>
 
 
       
@@ -377,7 +377,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -390,8 +390,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/20/thoughts-on-performance-of-max-vs-order-by-limit-1/" rel="next" title="thoughts on performance of max vs order by limit 1">
-                <i class="fa fa-chevron-left"></i> thoughts on performance of max vs order by limit 1
+              <a href="/2019/12/24/leetcode-29/" rel="next" title="leetcode-29">
+                <i class="fa fa-chevron-left"></i> leetcode-29
               </a>
             
           </div>
@@ -399,10 +399,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/12/24/leetcode-29/" rel="prev" title="leetcode-29">
-                leetcode-29 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
